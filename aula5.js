@@ -26,3 +26,34 @@ const calcularBonus = (funcionario) => {
 
 calcularBonus(funcionario1);
 calcularBonus(funcionario2);
+
+console.log("--- exercício aula 5 ---");
+
+const dias = {
+  dia1: "segunda",
+  dia2: "terça",
+  dia3: "quarta",
+  dia4: "quinta",
+  dia5: "sexta",
+  dia6: "sábado",
+  dia7: "domingo",
+};
+
+const feriados = {
+  sabado: true,
+  domingo: false,
+}
+
+const decidirPromocaoDoDia = (diaDaSemana, feriado) => {
+  if(diaDaSemana.dia6 || diaDaSemana.dia7){
+    console.log("Promoção de Fim de Semana: Pizza em dobro!");
+  }else if(feriado.sabado === true){
+    console.log("Promoção de Feriado! Refri grátis na compra de qualquer pizza!");
+  }else{
+    console.log("Hoje sem promoções especiais!");
+  };
+};
+
+decidirPromocaoDoDia(dias.dia6, false);
+decidirPromocaoDoDia(dias.dia1, true);
+decidirPromocaoDoDia(dias.dia2, false);
