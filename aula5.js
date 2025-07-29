@@ -29,31 +29,51 @@ calcularBonus(funcionario2);
 
 console.log("--- exercício aula 5 ---");
 
-const dias = {
-  dia1: "segunda",
-  dia2: "terça",
-  dia3: "quarta",
-  dia4: "quinta",
-  dia5: "sexta",
-  dia6: "sábado",
-  dia7: "domingo",
-};
+// const dias = {
+//   dia1: "segunda",
+//   dia2: "terça",
+//   dia3: "quarta",
+//   dia4: "quinta",
+//   dia5: "sexta",
+//   dia6: "sábado",
+//   dia7: "domingo",
+// };
 
-const feriados = {
-  sabado: true,
-  domingo: false,
-}
+// const feriados = {
+//   sabado: true,
+//   domingo: false,
+// }
 
-const decidirPromocaoDoDia = (diaDaSemana, feriado) => {
-  if(diaDaSemana.dia6 || diaDaSemana.dia7){
-    console.log("Promoção de Fim de Semana: Pizza em dobro!");
-  }else if(feriado.sabado === true){
+// const decidirPromocaoDoDia = (diaDaSemana, feriado) => {
+//   if(diaDaSemana.dia6 || diaDaSemana.dia7){
+//     console.log("Promoção de Fim de Semana: Pizza em dobro!");
+//   }else if(feriado.sabado === true){
+//     console.log("Promoção de Feriado! Refri grátis na compra de qualquer pizza!");
+//   }else{
+//     console.log("Hoje sem promoções especiais!");
+//   };
+// };
+
+// decidirPromocaoDoDia(dias.dia6, false);
+// decidirPromocaoDoDia(dias.dia1, true);
+// decidirPromocaoDoDia(dias.dia2, false);
+
+console.log("--- exercício corrigido! ---");
+
+const decidirPromocaoDoDia = (nomeDoDia, ehFeriado) => {
+  console.log(`Analisando o dia: ${nomeDoDia} (feriado: ${ehFeriado})`);
+
+  if(nomeDoDia === 'sábado' || nomeDoDia === 'domingo'){
+    console.log("Promoção de fim de semana: Pizza em dobro!");
+  }else if(ehFeriado === true){
     console.log("Promoção de Feriado! Refri grátis na compra de qualquer pizza!");
   }else{
     console.log("Hoje sem promoções especiais!");
-  };
+  }
 };
 
-decidirPromocaoDoDia(dias.dia6, false);
-decidirPromocaoDoDia(dias.dia1, true);
-decidirPromocaoDoDia(dias.dia2, false);
+console.log("--- MOSTRANDO A SOLUÇÃO ---");
+
+decidirPromocaoDoDia("sábado", false);
+decidirPromocaoDoDia("segunda", true);
+decidirPromocaoDoDia("domingo", false);
