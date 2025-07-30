@@ -58,3 +58,5 @@ const bebidasAlcoolicas = ["Cerveja", "Vinho"];
 const cardapioBebidasCompleto = [...bebidasAlcoolicas, ...bebidasSemAlcool, "Suco de Laranja"];
 
 console.log(cardapioBebidasCompleto);
+
+console.log("--- rest operator ---");
