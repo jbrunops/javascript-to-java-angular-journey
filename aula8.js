@@ -1,37 +1,47 @@
-// const pizzaDeQueijo = {
-//   molho: "Tomate",
-//   queijo: "Mussarela"
-// };
+// // const pizzaDeQueijo = {
+// //   molho: "Tomate",
+// //   queijo: "Mussarela"
+// // };
 
-// const pizzaDeNutella = {
-//   base: "Chocolate",
-//   calda: "Morando"
-// };
+// // const pizzaDeNutella = {
+// //   base: "Chocolate",
+// //   calda: "Morando"
+// // };
 
-// const pedidoDoCLiente = {
-//   ...pizzaDeQueijo,
-//   delivery: 2.50,
-// };
+// // const pedidoDoCLiente = {
+// //   ...pizzaDeQueijo,
+// //   delivery: 2.50,
+// // };
 
-// console.log(pedidoDoCLiente);
+// // console.log(pedidoDoCLiente);
 
-console.log("--- Spread em Arrays ---");
+// console.log("--- Spread em Arrays ---");
 
-const refrigerantes = [
-  "coca-cola",
-  "guaraná"
-];
+// const refrigerantes = [
+//   "coca-cola",
+//   "guaraná"
+// ];
 
-const sucos = [
-  "laranja",
-  "abacaxi"
-];
+// const sucos = [
+//   "laranja",
+//   "abacaxi"
+// ];
 
-const cardapioDeBebidas = [
-  ...refrigerantes,
-  ...sucos,
-  "Água Mineral"
-];
+// const cardapioDeBebidas = [
+//   ...refrigerantes,
+//   ...sucos,
+//   "Água Mineral"
+// ];
+
+// console.log("--- RESULTADO ---");
+// console.log(cardapioDeBebidas);
+
+console.log("--- REST OPERATOR ---");
+
+const filaDePedidos = ["Pedido 1", "Pedido 2", "Pedido 3", "Pedido 4", "Pedido 5",];
+
+const [primeiroPedido, ...outrosPedidos] = filaDePedidos;
 
 console.log("--- RESULTADO ---");
-console.log(cardapioDeBebidas);
+console.log(`O primeiro pedido para entrega: ${primeiroPedido}`);
+console.log(`O resto dos pedidos para entrega: ${outrosPedidos}`);
