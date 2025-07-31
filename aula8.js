@@ -45,3 +45,4 @@ const [primeiroPedido, ...outrosPedidos] = filaDePedidos;
 console.log("--- RESULTADO ---");
 console.log(`O primeiro pedido para entrega: ${primeiroPedido}`);
 console.log(`O resto dos pedidos para entrega: ${outrosPedidos}`);
+
