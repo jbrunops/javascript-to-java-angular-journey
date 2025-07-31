@@ -4,21 +4,6 @@ const pedidos = [
   { id: 13, cliente: "Carol", valor: 99, pizza: "Especial Camarão"}
 ];
 
-// const listaDePizzas = pedidos.map((pedido) => {
-//   return pedido.pizza;
-// });
-
-// console.log("--- USANDO MAP ---");
-// console.log(listaDePizzas);
-
-// console.log("--- USANDO FILTER ---");
-
-// const pedidosCaros = pedidos.filter((pedido) => {
-//   return pedido.valor > 40;
-// })
-
-// console.log(pedidosCaros);
-
 console.log("--- USANDO O FIND ---");
 const pedidoDoBruno = pedidos.find((pedido) =>{
   if (pedido.id === 11){
