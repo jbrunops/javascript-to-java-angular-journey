@@ -1,28 +1,25 @@
-console.log("--- CLiente: vou ligar para a pizzaria... ---");
-
-function fazerPedidoDePizza(){
+function construir(){
   return new Promise((resolve, reject) => {
-    console.log("--- Seu pedido foi anotado! ---");
+    console.log("Pedido recebido!");
 
     setTimeout(() => {
-      const pizzaPronta = true;
+      const temosIngredientes = true;
 
-      if(pizzaPronta){
-        resolve("Aqui está a pizza!");
+      if(temosIngredientes){
+        const pizzaPronta = { sabor: "Calabresa", tamanho: "Grande" };
       }else{
-        reject("Desculpe, o forno quebrou!");
-      }
+        reject("FALTAM INGREDIENTES!");
+      };
     }, 6000);
   });
-}
+};
 
-const promessaDaPIzza = fazerPedidoDePizza();
+const minhaPromessa = construir();
 
-console.log("Ótimo, tenho a promessa!");
-
-promessaDaPIzza
-.then((resultadoDaPromessa) => {
-  console.log(`--- O entregador chegou! ---`);
-  console.log(`Entregador: ${resultadoDaPromessa}`);
-  console.log("Cliente diz: Que pena, vou pedir outro lanche!");
+minhaPromessa
+.then((pizzaQueReceberam) => {
+  console.log(pizzaQueReceberam);
 })
+.catch((mensagemDeErro) => {
+  console.log(mensagemDeErro);
+});
