@@ -1,27 +1,18 @@
-// Arquivo: app.ts (Versão CORRIGIDA E COMPLETA)
+// Copie e cole este conteúdo completo em: src/app/app.ts
 
-// As importações originais estavam um pouco diferentes, vamos usar as corretas.
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { RegisterComponent } from './auth/register/register'; // 1. Importando nosso componente
 
 @Component({
   selector: 'app-root',
-  standalone: true, // <-- CORREÇÃO #1: Esta linha é ESSENCIAL e tinha sumido.
-  imports: [CommonModule, RouterOutlet], // <-- CORREÇÃO #2: Adicionamos CommonModule, que é importante.
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, RegisterComponent], // 2. Adicionando à lista de materiais
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-// CORREÇÃO #3: O nome da classe deve ser 'AppComponent' por convenção do Angular.
 export class AppComponent {
-
-  // CORREÇÃO #4: A definição das propriedades estava com a sintaxe incorreta.
-  // Esta é a forma correta de definir 'title' e 'slogan' como signals.
-  title = signal('Pizzaria La Notte');
-  slogan = signal('A melhor da cidade!');
-
-  // Opcional: Um método para mudar o título (vamos deixar comentado por enquanto)
-  // mudarTitulo() {
-  //   this.title.set('Novo Título Incrível');
-  // }
+  // Não precisamos de nenhuma lógica aqui por enquanto.
+  // O componente principal apenas servirá de "palco" para os outros.
 }

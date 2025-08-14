@@ -1,1 +1,41 @@
+# Arquivo .gitignore completo e comentado
+
+# 1. Dependências e Pacotes
+# A pasta mais importante a ser ignorada. Contém todas as bibliotecas de terceiros.
 node_modules/
+
+# Arquivos de log gerados pelo NPM em caso de erro.
+npm-debug.log*
+yarn-error.log
+
+# 2. Arquivos de Build e Produção
+# Pastas onde a versão "final" e otimizada da sua aplicação é gerada.
+# O Angular gera a pasta 'dist/'.
+dist/
+build/
+.angular/cache/
+
+# 3. Arquivos de Variáveis de Ambiente
+# EXTREMAMENTE IMPORTANTE! Nunca envie senhas, chaves de API ou segredos.
+.env
+.env.local
+.env.*.local
+
+# 4. Arquivos de IDE e Editor de Código
+# Configurações específicas do seu VS Code (temas, extensões, etc.).
+.vscode/
+
+# Arquivos de outros editores populares
+.idea/ # Para editores da JetBrains (IntelliJ, WebStorm)
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 5. Arquivos de Sistema Operacional
+# Arquivos gerados automaticamente pelo macOS
+.DS_Store
+
+# Arquivos gerados automaticamente pelo Windows
+Thumbs.db

@@ -5,13 +5,13 @@ const minhaPizzaria = {
 
 const controlarGastos = (pizzaria) => {
   return new Promise((resolve, reject) => {
-    const { nome, gastosDoMes } = pizzaria;
     setTimeout(() => {
+      const { nome, gastosDoMes } = pizzaria;
       const limiteDeGastos = 1000;
-      if (pizzaria.gastosDoMes <= limiteDeGastos){
-        resolve(`A pizziria teve ${gastosDoMes} e está dentro do limite!`);
+      if (gastosDoMes <= limiteDeGastos){
+        resolve(`A pizzaria ${nome} teve ${gastosDoMes} de gastos e está dentro do limite!`);
       }else{
-        reject(`A pizzaria teve ${gastosDoMes} e está fora do limnite de gastos!`);
+        reject(`A pizzaria ${nome} teve ${gastosDoMes} de gastos e está fora do limite de gastos!`);
       }
     }, 3000);
   });
